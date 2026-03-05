@@ -24,15 +24,14 @@ Sécuriser l’accès à l’application et stabiliser l’architecture d’auto
 Couvrir le scénario critique de modification de mot de passe.
 
 ## Tests fonctionnels
-- Modification du mot de passe
-- Connexion avec le nouveau mot de passe
-- Activation / désactivation de la double authentification
+- Modification du mot de passe et Connexion avec le nouveau mot de passe
+- Désactivation de la double authentification et connexion sans le 2FA
 
 ## Accessibilité
-- Vérification que le message de confirmation de modification est visible et lisible.
+- Vérification de la présence de labels associés au message de confirmation de changement de mot de passe.
 
-## Éco-conception
-- Vérification que seule la section concernée est mise à jour après modification.
+## Sécurité
+- Vérification que les champs de modification de mot de passe sont masqués
 
 -----------------------------------------------------------------------
 # Sprint 3 – Virements et Bénéficiaires

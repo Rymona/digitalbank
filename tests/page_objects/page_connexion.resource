@@ -24,3 +24,7 @@ Cliquer sur le bouton se souvenir de moi
 Cliquer sur le bouton connexion
     # Cliquer sur le bouton "Se connecter" permet d'aller à la page d'accueil
     Click Button    xpath=//*[@data-testid="btn-login"]
+
+Je suis sur la page de connexion
+    # Vérifier que l'utilisateur est bien sur la page de connexion
+    Wait Until Page Contains Element    xpath=//*[@data-testid="btn-login"]    timeout=10s

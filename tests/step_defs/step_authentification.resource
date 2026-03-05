@@ -50,3 +50,9 @@ Et le champ email conserve la valeur "${email}"
     # Vérifier que le champ email conserve la valeur saisie après une tentative de connexion infructueuse
     ${email_value}=    Get Value    xpath=//input[@id="email"]
     Should Be Equal    ${email_value}    ${email}
+
+Se connecter avec "${email}" et "${mot_de_passe}"
+    # Keyword réutilisable pour se connecter avec des identifiants spécifiques
+    Quand il saisit "${email}" dans le champ email
+    Et il saisit "${mot_de_passe}" dans le champ mot de passe
+    Et il clique sur le bouton de connexion
