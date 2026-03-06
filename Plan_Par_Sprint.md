@@ -46,9 +46,6 @@ Sécuriser les opérations financières.
 ## Accessibilité
 - Vérification que le message d’erreur “solde insuffisant” est visible et ne repose pas uniquement sur la couleur.
 
-## Éco-conception
-- Vérification que le solde est mis à jour dynamiquement sans rechargement complet.
-
 -----------------------------------------------------------------------
 # Sprint 4 – Paiement et Pipeline CI/CD
 ## Objectif
