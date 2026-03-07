@@ -36,6 +36,7 @@ jobs:
 
       # Démarrer le serveur local pour l'application
       - name: Start local server
+        working-directory: ./Application
         run: |
           python -m http.server 8000 &
           sleep 5
