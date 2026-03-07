@@ -34,6 +34,12 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y xvfb
 
+      # Démarrer le serveur local pour l'application
+      - name: Start local server
+        run: |
+          python -m http.server 8000 &
+          sleep 5
+
       # Lancer les tests avec Robot Framework
       - name: Run Robot Framework tests
         run: xvfb-run -a robot -d tests/reports tests/test_suites
