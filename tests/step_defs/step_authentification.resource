@@ -4,7 +4,7 @@
 # Importer les définitions des pages nécessaires
 Resource    ../page_objects/page_connexion.resource
 Resource    ../page_objects/page_accueil.resource
-Resource    ../page_objects/page_connexion_2fa.resource
+Resource    ../page_objects/page_connexion_2FA.resource
 
 *** Keywords ***
 Etant donné que l'utilisateur est sur la page de connexion
