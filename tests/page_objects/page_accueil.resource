@@ -22,3 +22,11 @@ Virement affiché dans l'historique des transactions du compte
     Element Should Be Visible    xpath=//span[@class="transaction-description" and text()="${motif}"]
     ${amount_text}=    Get Text    xpath=//span[contains(@class,"transaction-amount")]
     Should Contain    ${amount_text}    ${montant}
+
+Cliquer sur le bouton "Virements"
+    Scroll Element Into View    xpath=//button[@data-testid="tab-transfer"]
+    Click Button    xpath=//button[@data-testid="tab-transfer"]
+
+Cliquer sur le bouton "Factures"
+    Scroll Element Into View    xpath=//button[@data-testid="tab-bills"]
+    Click Button    xpath=//button[@data-testid="tab-bills"]

@@ -3,10 +3,6 @@
 Library    SeleniumLibrary
 
 *** Keywords ***
-Cliquer sur le bouton "Virements"
-    Scroll Element Into View    xpath=//button[@data-testid="tab-transfer"]
-    Click Button    xpath=//button[@data-testid="tab-transfer"]
-
 Je suis sur la page de virements
     Wait Until Page Contains Element    xpath=//h2[text()="Effectuer un virement"]
 
