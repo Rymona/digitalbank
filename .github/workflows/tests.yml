@@ -1,0 +1,39 @@
+name: RBF - Automated Tests - DigitalBank
+
+on:
+  push:
+    branches:
+    # les tests se lancent lorsqu'on pousse sur la branche main
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout du dépôt
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Configuration de Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # Installation de robot framework et des bibliothèques selenium
+      - name: Install Robot Framework and Selenium
+        run: |
+          python -m pip install --upgrade pip
+          pip install --upgrade robotframework robotframework-seleniumlibrary selenium
+          python -c "import selenium; print('selenium', selenium.__version__)"
+
+      # Installation de xvfb pour l'exécution des tests en mode headless
+      - name: Install xvfb
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb
+
+      # Lancer les tests avec Robot Framework
+      - name: Run Robot Framework tests
+        run: xvfb-run -a robot -d tests/reports tests/test_suites

@@ -54,12 +54,6 @@ Finaliser la couverture fonctionnelle et industrialiser l’exécution.
 ## Tests fonctionnels
 - Paiement de facture valide
 
-## Accessibilité
-- Vérification que le message de confirmation de paiement est visible.
-
-## Éco-conception
-- Vérification qu’il n’y a pas de double soumission du formulaire.
-
 # Pipeline CI/CD
 - Mise en place du pipeline GitHub Actions
 - Exécution automatique des tests sur push vers la branche main
